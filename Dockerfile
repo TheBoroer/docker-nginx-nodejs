@@ -1,9 +1,12 @@
 FROM alpine:3.4
 
-MAINTAINER ngineered <support@ngineered.co.uk>
+MAINTAINER boro <docker@bo.ro>
 
-RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories && apk update && \
-    apk add --no-cache bash \
+RUN echo 'http://nl.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories 
+RUN echo 'http://ghostbar.github.io/alpine-pkg-nodejs-lts/v3.4/pkgs' >> /etc/apk/repositories
+
+RUN apk update && \
+    apk add --allow-untrusted --no-cache bash \
     openssh-client \
     wget \
     nginx \
