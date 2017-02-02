@@ -12,7 +12,7 @@ RUN apk update && \
     nginx \
     supervisor \
     curl \
-    nodejs-lts \
+    nodejs-lts=6.9.5-r0 \
     bc \
     gcc \
     musl-dev \
