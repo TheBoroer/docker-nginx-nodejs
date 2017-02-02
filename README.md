@@ -10,7 +10,8 @@ The Docker hub build can be found here: [https://registry.hub.docker.com/u/richa
 ## Versions
 | Tag | Nginx | nodeJS | Alpine |
 |-----|-------|-----|--------|
-| latest | 1.10.1 | 4.4.4 | 3.4 |
+| latest | 1.10.1 | 6.9.5 | 3.4 |
+| 4 | 1.10.1 | 4.4.4 | 3.4 |
 
 ## Building from source
 To build from source you need to clone the git repo and run docker build:
