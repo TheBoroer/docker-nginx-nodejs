@@ -5,7 +5,7 @@ MAINTAINER boro <docker@bo.ro>
 RUN echo 'http://nl.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories 
 RUN echo 'http://ghostbar.github.io/alpine-pkg-nodejs-lts/v3.4/pkgs' >> /etc/apk/repositories
 
-RUN apk update && \
+RUN apk update --allow-untrusted && \
     apk add --allow-untrusted --no-cache bash \
     openssh-client \
     wget \
@@ -30,6 +30,8 @@ RUN apk update && \
     mkdir -p /var/www/app && \
     mkdir -p /run/nginx && \
     mkdir -p /var/log/supervisor
+
+
 
 RUN pip install -U letsencrypt && \
     mkdir -p /etc/letsencrypt/webrootauth
