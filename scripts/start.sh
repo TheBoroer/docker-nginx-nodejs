@@ -59,13 +59,14 @@ else
  fi
 fi
 
-# Enable custom nginx config files if they exist
-if [ -f /var/www/html/conf/nginx/nginx-site.conf ]; then
-  cp /var/www/html/conf/nginx/nginx-site.conf /etc/nginx/sites-available/default.conf
+# Enable custom nginx config files if they exist (HTTP only)
+if [ -f /var/www/html/_conf/nginx/nginx-site.conf ]; then
+  cp /var/www/html/_conf/nginx/nginx-site.conf /etc/nginx/sites-enabled/default.conf
 fi
 
-if [ -f /var/www/html/conf/nginx/nginx-site-ssl.conf ]; then
-  cp /var/www/html/conf/nginx/nginx-site-ssl.conf /etc/nginx/sites-available/default-ssl.conf
+# Enable custom nginx config files if they exist (HTTP only)
+if [ -f /var/www/html/_conf/nginx/nginx-site-ssl.conf ]; then
+  cp /var/www/html/_conf/nginx/nginx-site-ssl.conf /etc/nginx/sites-enabled/default-ssl.conf
 fi
 
 ## Install Node Packages
